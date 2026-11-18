@@ -1,9 +1,8 @@
-import "./App.css";
-
 function App() {
   return (
-    <div>
+    <div className="container py-5">
       <h1>Welcome to Urban Bites 🍔</h1>
+      <p>Discover our delicious food, drinks, and desserts.</p>
     </div>
   );
 }
