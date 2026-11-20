@@ -1,7 +1,7 @@
 
 /* ========== NAVBAR ========== */
 
-.urban-navbar {
+.crave-navbar {
   background-color: #101010;
   padding: 18px 0;
   border-bottom: 1px solid #292929;
@@ -10,35 +10,38 @@
   z-index: 1000;
 }
 
-/* Logo */
-.urban-logo {
+/* ========== LOGO ========== */
+
+.crave-logo {
   font-size: 26px;
   font-weight: 800;
   color: white;
 }
 
-.urban-logo span,
-.urban-logo i {
+.crave-logo span,
+.crave-logo i {
   color: #ff6b00;
 }
 
-.urban-logo:hover {
+.crave-logo:hover {
   color: white;
 }
 
-/* Navigation Links */
-.urban-navbar .nav-link {
+/* ========== NAVIGATION LINKS ========== */
+
+.crave-navbar .nav-link {
   color: #ddd;
   font-weight: 500;
   transition: 0.3s;
 }
 
-.urban-navbar .nav-link:hover,
-.urban-navbar .nav-link.active {
+.crave-navbar .nav-link:hover,
+.crave-navbar .nav-link.active {
   color: #ff6b00;
 }
 
-/* Cart */
+/* ========== CART ========== */
+
 .cart-display {
   position: relative;
   color: white;
@@ -64,13 +67,18 @@
   justify-content: center;
 }
 
-/* Mobile */
+/* ========== RESPONSIVE ========== */
+
 @media (max-width: 991px) {
-  .urban-navbar .navbar-collapse {
+  .crave-navbar .navbar-collapse {
     padding-top: 20px;
   }
 
   .cart-display {
     margin: 15px 0;
+  }
+
+  .crave-logo {
+    font-size: 22px;
   }
 }

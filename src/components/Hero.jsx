@@ -3,12 +3,11 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <section className="urban-hero" id="home">
+    <section className="crave-hero" id="home">
 
       {/* Hero Background Image */}
       <img
         src={`${import.meta.env.BASE_URL}images/burger.png`}
-          // import.meta.env.BASE_URL ensures the image works on both localhost and GitHub Pages.
         alt="Delicious burger with fries"
         className="hero-image"
       />
@@ -22,18 +21,17 @@ function Hero() {
 
         {/* Main Heading */}
         <h1>
-          URBAN <span>BITES</span>
+          CRAVE <span>DISTRICT</span>
         </h1>
 
         {/* Description */}
         <p>
           Burgers, Meals, Drinks & More —
-          Fresh, Bold, and Always Satisfying!
+          Your Cravings, Our Passion!
         </p>
 
         {/* Buttons */}
         <div className="hero-buttons">
-
           <a href="#menu" className="btn hero-primary">
             <i className="bi bi-egg-fried me-2"></i>
             View Menu
@@ -44,8 +42,8 @@ function Hero() {
             <i className="bi bi-cart3 me-2"></i>
             Order Now
           </a>
-
         </div>
+
       </div>
     </section>
   );

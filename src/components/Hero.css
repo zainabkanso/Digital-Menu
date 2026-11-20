@@ -1,7 +1,7 @@
 
 /* ========== HERO SECTION ========== */
 
-.urban-hero {
+.crave-hero {
   position: relative;
   min-height: 390px;
   background: #101010;
@@ -16,7 +16,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 70%;
+  width: 60%;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -24,7 +24,7 @@
 }
 
 /* Dark Gradient */
-.urban-hero::after {
+.crave-hero::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -64,7 +64,7 @@
 /* Main Heading */
 .hero-content h1 {
   color: #fff;
-  font-size: clamp(42px, 5.5vw, 82px);
+  font-size: clamp(36px, 4.5vw, 70px);
   font-weight: 900;
   font-style: italic;
   line-height: 1.05;
@@ -91,38 +91,39 @@
   gap: 15px;
 }
 
-.urban-hero .hero-primary {
+.crave-hero .hero-primary {
   background-color: #ff6b00;
-  color: #ffffff;
+  color: #fff;
   border: 1px solid #ff6b00;
   border-radius: 10px;
   padding: 12px 25px;
   font-weight: 600;
 }
 
-.urban-hero .hero-primary:hover {
+.crave-hero .hero-primary:hover {
   background-color: #e65f00;
-  color: #ffffff;
+  color: #fff;
   border-color: #e65f00;
 }
 
-.urban-hero .hero-secondary {
+.crave-hero .hero-secondary {
   background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
+  color: #fff;
+  border: 1px solid #fff;
   border-radius: 10px;
   padding: 12px 25px;
   font-weight: 600;
 }
 
-.urban-hero .hero-secondary:hover {
-  background-color: #ffffff;
+.crave-hero .hero-secondary:hover {
+  background-color: #fff;
   color: #101010;
 }
 
-/* Responsive */
+/* ========== RESPONSIVE ========== */
+
 @media (max-width: 768px) {
-  .urban-hero {
+  .crave-hero {
     min-height: 420px;
   }
 
@@ -131,7 +132,7 @@
     opacity: 0.45;
   }
 
-  .urban-hero::after {
+  .crave-hero::after {
     background: rgba(0, 0, 0, 0.55);
   }
 
@@ -141,10 +142,36 @@
   }
 
   .hero-content h1 {
-    font-size: 45px;
+    font-size: clamp(34px, 8vw, 45px);
   }
 
   .hero-content p {
+    font-size: 14px;
+  }
+}
+/* ========== MOBILE HERO BUTTONS ========== */
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-buttons .btn i {
     font-size: 14px;
   }
 }

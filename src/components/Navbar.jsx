@@ -3,13 +3,13 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark urban-navbar">
+    <nav className="navbar navbar-expand-lg navbar-dark crave-navbar">
       <div className="container">
 
         {/* Logo */}
-        <a className="navbar-brand urban-logo" href="#home">
+        <a className="navbar-brand crave-logo" href="#home">
           <i className="bi bi-egg-fried me-2"></i>
-          Urban <span>Bites</span>
+          Crave <span>District</span>
         </a>
 
         {/* Mobile Toggle */}
@@ -17,8 +17,8 @@ function Navbar() {
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#urbanNavbar"
-          aria-controls="urbanNavbar"
+          data-bs-target="#craveNavbar"
+          aria-controls="craveNavbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
@@ -26,8 +26,10 @@ function Navbar() {
         </button>
 
         {/* Navigation */}
-        <div className="collapse navbar-collapse" id="urbanNavbar">
-
+        <div
+          className="collapse navbar-collapse"
+          id="craveNavbar"
+        >
           <ul className="navbar-nav mx-auto gap-lg-4">
             <li className="nav-item">
               <a className="nav-link active" href="#home">
