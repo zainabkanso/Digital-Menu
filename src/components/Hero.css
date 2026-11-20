@@ -1,0 +1,150 @@
+
+/* ========== HERO SECTION ========== */
+
+.urban-hero {
+  position: relative;
+  min-height: 390px;
+  background: #101010;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Hero Image */
+.hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+}
+
+/* Dark Gradient */
+.urban-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #101010 10%,
+    rgba(16, 16, 16, 0.95) 30%,
+    rgba(16, 16, 16, 0.2) 75%
+  );
+  z-index: -1;
+}
+
+/* Content */
+.hero-content {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+/* Small Heading */
+.hero-label {
+  color: #ddd;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.hero-label span {
+  width: 65px;
+  height: 3px;
+  background: #ff6b00;
+}
+
+/* Main Heading */
+.hero-content h1 {
+  color: #fff;
+  font-size: clamp(42px, 5.5vw, 82px);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.05;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+  color: #ff6b00;
+}
+
+/* Description */
+.hero-content p {
+  color: #ddd;
+  font-size: 16px;
+  max-width: 550px;
+  margin-bottom: 25px;
+}
+
+/* ========== HERO BUTTONS ========== */
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.urban-hero .hero-primary {
+  background-color: #ff6b00;
+  color: #ffffff;
+  border: 1px solid #ff6b00;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-weight: 600;
+}
+
+.urban-hero .hero-primary:hover {
+  background-color: #e65f00;
+  color: #ffffff;
+  border-color: #e65f00;
+}
+
+.urban-hero .hero-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-weight: 600;
+}
+
+.urban-hero .hero-secondary:hover {
+  background-color: #ffffff;
+  color: #101010;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .urban-hero {
+    min-height: 420px;
+  }
+
+  .hero-image {
+    width: 100%;
+    opacity: 0.45;
+  }
+
+  .urban-hero::after {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .hero-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}

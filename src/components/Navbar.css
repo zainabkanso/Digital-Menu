@@ -1,0 +1,76 @@
+
+/* ========== NAVBAR ========== */
+
+.urban-navbar {
+  background-color: #101010;
+  padding: 18px 0;
+  border-bottom: 1px solid #292929;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.urban-logo {
+  font-size: 26px;
+  font-weight: 800;
+  color: white;
+}
+
+.urban-logo span,
+.urban-logo i {
+  color: #ff6b00;
+}
+
+.urban-logo:hover {
+  color: white;
+}
+
+/* Navigation Links */
+.urban-navbar .nav-link {
+  color: #ddd;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.urban-navbar .nav-link:hover,
+.urban-navbar .nav-link.active {
+  color: #ff6b00;
+}
+
+/* Cart */
+.cart-display {
+  position: relative;
+  color: white;
+  font-size: 25px;
+  width: fit-content;
+  margin-left: 15px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -7px;
+  right: -12px;
+  background: #ff6b00;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .urban-navbar .navbar-collapse {
+    padding-top: 20px;
+  }
+
+  .cart-display {
+    margin: 15px 0;
+  }
+}

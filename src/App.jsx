@@ -1,9 +1,17 @@
+
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+
 function App() {
   return (
-    <div className="container py-5">
-      <h1>Welcome to Urban Bites 🍔</h1>
-      <p>Discover our delicious food, drinks, and desserts.</p>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+
+      <section id="menu" className="container py-5">
+        <h2>Our Menu</h2>
+      </section>
+    </>
   );
 }
 
