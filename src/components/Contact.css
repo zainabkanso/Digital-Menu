@@ -1,0 +1,131 @@
+
+/* ========== CONTACT SECTION ========== */
+
+.crave-contact {
+  background: #111111;
+  padding: 70px 0;
+  scroll-margin-top: 85px;
+}
+
+/* Contact Header */
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.contact-label {
+  color: #ff6b00;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.contact-header h2 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.contact-header h2 span {
+  color: #ff6b00;
+}
+
+.contact-header p {
+  color: #aaaaaa;
+  font-size: 15px;
+}
+
+/* Contact Cards */
+
+.contact-card {
+  background: #222222;
+  border: 1px solid #333333;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  border-color: #ff6b00;
+  transform: translateY(-4px);
+}
+
+.contact-card > i {
+  color: #ff6b00;
+  font-size: 30px;
+}
+
+.contact-card h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0 10px;
+}
+
+.contact-card p {
+  color: #aaaaaa;
+  font-size: 14px;
+}
+
+.contact-card span {
+  color: #ff6b00;
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* Social Media */
+
+.contact-social {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-social h4 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #252525;
+  color: #ff6b00;
+  border: 1px solid #444444;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+  .crave-contact {
+    padding: 50px 0;
+  }
+
+  .contact-header h2 {
+    font-size: 28px;
+  }
+
+  .contact-header p {
+    font-size: 14px;
+  }
+
+  .contact-card {
+    padding: 25px 15px;
+  }
+}
