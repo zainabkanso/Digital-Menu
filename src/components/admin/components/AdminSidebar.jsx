@@ -33,15 +33,15 @@ function AdminSidebar({ activePage }) {
           <span>Add Product</span>
         </a>
 
-        <div className="admin-nav-item">
+        <a
+          href="?admin=1&page=orders"
+          className={activePage === "orders" ? "active" : ""}
+        >
           <i className="bi bi-bag-check"></i>
           <span>Orders</span>
-        </div>
+        </a>
 
-        <div className="admin-nav-item">
-          <i className="bi bi-gear"></i>
-          <span>Settings</span>
-        </div>
+        
       </nav>
 
       <div className="admin-sidebar-bottom">

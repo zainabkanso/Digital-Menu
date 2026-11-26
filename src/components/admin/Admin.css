@@ -924,3 +924,218 @@ textarea.admin-form-input {
     height: 160px;
   }
 }
+
+/* ========== ORDERS MANAGEMENT ========== */
+
+.admin-orders {
+  width: 100%;
+}
+
+/* ========== SUMMARY CARDS ========== */
+
+.orders-stat-card {
+  background: #ffffff;
+  padding: 22px;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+  min-height: 155px;
+}
+
+.orders-stat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #fff0e5;
+  color: #ff6b00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  margin-bottom: 14px;
+}
+
+.orders-stat-card p {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.orders-stat-card h3 {
+  font-size: 27px;
+  font-weight: 800;
+  color: #222;
+  margin: 0;
+}
+
+/* ========== TABLE CONTAINER ========== */
+
+.orders-table-container {
+  background: white;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+.orders-table-header h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.orders-table-header p {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 22px;
+}
+
+/* ========== SEARCH & FILTER ========== */
+
+.orders-toolbar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.orders-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  padding: 11px 15px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+}
+
+.orders-search i {
+  color: #999;
+}
+
+.orders-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: #333;
+  font-size: 14px;
+}
+
+.orders-search input:disabled {
+  opacity: 1;
+}
+
+.orders-filter {
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  padding: 11px 15px;
+  background: white;
+  color: #555;
+  font-size: 14px;
+}
+
+.orders-filter:disabled {
+  opacity: 1;
+  background: white;
+  color: #555;
+}
+
+/* ========== ORDERS TABLE ========== */
+
+.orders-table {
+  --bs-table-bg: white;
+  --bs-table-color: #333;
+  min-width: 740px;
+  font-size: 13px;
+}
+
+.orders-table th {
+  font-size: 12px;
+  color: #888;
+  font-weight: 700;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.orders-table td {
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.orders-id {
+  color: #ff6b00 !important;
+  font-weight: 700;
+}
+
+.orders-total {
+  font-weight: 700;
+}
+
+/* ========== STATUS BADGES ========== */
+
+.order-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.order-status.pending {
+  background: #fff3cd;
+  color: #a36b00;
+}
+
+.order-status.preparing {
+  background: #e7f0ff;
+  color: #2860b7;
+}
+
+.order-status.completed {
+  background: #e1f7e8;
+  color: #21834b;
+}
+
+.order-status.cancelled {
+  background: #ffe5e5;
+  color: #c0392b;
+}
+
+/* ========== VIEW BUTTON ========== */
+
+.orders-view-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: #fff0e5;
+  color: #ff6b00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.orders-view-btn:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 767px) {
+  .orders-table-container {
+    padding: 15px;
+  }
+
+  .orders-toolbar {
+    flex-direction: column;
+  }
+
+  .orders-filter {
+    width: 100%;
+  }
+
+  .orders-stat-card {
+    min-height: auto;
+  }
+}

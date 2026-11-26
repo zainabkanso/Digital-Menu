@@ -5,34 +5,50 @@ import AdminHeader from "./components/AdminHeader";
 import Dashboard from "./pages/Dashboard";
 import ManageMenu from "./pages/ManageMenu";
 import AddProduct from "./pages/AddProduct";
+import Orders from "./pages/Orders";
 
 import "./Admin.css";
 
 function AdminLayout() {
-// Step 1: Get URL parameters
+
+  // Read the page from the URL
   const params = new URLSearchParams(window.location.search);
 
-  // Step 2: Declare requestedPage
   const requestedPage = params.get("page");
 
-  // Step 3: Check if the requested page is valid
-  const page = ["dashboard", "menu", "add-product"].includes(requestedPage)
+  // Available admin pages
+  const pages = [
+    "dashboard",
+    "menu",
+    "add-product",
+    "orders"
+  ];
+
+  // Check if requested page is valid
+  const page = pages.includes(requestedPage)
     ? requestedPage
     : "dashboard";
 
-  // Page title and description
+  // Page titles
   const pageInfo = {
     dashboard: {
       title: "Dashboard Overview",
       description: "Welcome back! Here's your restaurant overview."
     },
+
     menu: {
       title: "Menu Management",
       description: "Manage your restaurant products."
     },
+
     "add-product": {
       title: "Add New Product",
       description: "Create a new restaurant menu item."
+    },
+
+    orders: {
+      title: "Orders Management",
+      description: "Track and manage customer orders."
     }
   };
 
@@ -42,7 +58,7 @@ function AdminLayout() {
       {/* Left Sidebar */}
       <AdminSidebar activePage={page} />
 
-      {/* Right Content */}
+      {/* Main Content */}
       <main className="admin-main">
 
         <AdminHeader
@@ -56,7 +72,10 @@ function AdminLayout() {
 
         {page === "add-product" && <AddProduct />}
 
+        {page === "orders" && <Orders />}
+
       </main>
+
     </div>
   );
 }
