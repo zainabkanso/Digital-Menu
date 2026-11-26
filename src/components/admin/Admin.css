@@ -1,0 +1,926 @@
+/* ========== ADMIN LAYOUT ========== */
+
+.admin-layout {
+  min-height: 100vh;
+  background: #f5f6fa;
+  color: #222;
+}
+
+/* ========== FIXED LEFT SIDEBAR ========== */
+
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 245px;
+  height: 100vh;
+  background: #161616;
+  color: white;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+/* ========== SIDEBAR BRAND ========== */
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 45px;
+  white-space: nowrap;
+}
+
+.admin-brand i {
+  color: #ff6b00;
+  font-size: 25px;
+}
+
+/* ========== SIDEBAR LABEL ========== */
+
+.admin-sidebar-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #777;
+  margin-bottom: 18px;
+}
+
+/* ========== SIDEBAR NAVIGATION ========== */
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.admin-nav a,
+.admin-nav-item {
+  text-decoration: none;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 15px;
+  border-radius: 9px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.admin-nav a i,
+.admin-nav-item i {
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.admin-nav a.active,
+.admin-nav a:hover,
+.admin-nav-item.active {
+  background: #ff6b00;
+  color: #fff;
+}
+
+/* ========== SIDEBAR BOTTOM ========== */
+
+.admin-sidebar-bottom {
+  margin-top: auto;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-sidebar-bottom i {
+  font-size: 22px;
+  color: #ff6b00;
+}
+
+/* ========== MAIN CONTENT ========== */
+
+.admin-main {
+  margin-left: 245px;
+  min-height: 100vh;
+  min-width: 0;
+  padding: 30px;
+}
+
+/* ========== HEADER ========== */
+
+.admin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.admin-topbar h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.admin-topbar p {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ========== HEADER ACTIONS ========== */
+
+.admin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 22px;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-user i {
+  color: #ff6b00;
+  font-size: 26px;
+}
+
+/* ========== STATISTICS CARDS ========== */
+
+.admin-stat-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 25px;
+  border-radius: 14px;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Card Icon */
+
+.admin-stat-icon {
+  width: 48px;
+  height: 48px;
+  background: #fff0e5;
+  color: #ff6b00;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  margin-bottom: 18px;
+}
+
+/* Card Number */
+
+.admin-stat-card h3 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+/* Card Description */
+
+.admin-stat-card p {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ========== WELCOME CARD ========== */
+
+.admin-welcome-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 35px;
+  border-radius: 14px;
+  margin-top: 35px;
+}
+
+.admin-welcome-card h2 {
+  font-size: 23px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.admin-welcome-card p {
+  color: #888;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ========== TABLET ========== */
+
+@media (max-width: 991px) {
+
+  /* Keep Sidebar on Left */
+  .admin-sidebar {
+    width: 210px;
+    padding: 25px 14px;
+  }
+
+  .admin-brand {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .admin-nav a,
+  .admin-nav-item {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  /* Adjust Main Content */
+  .admin-main {
+    margin-left: 210px;
+    padding: 25px 20px;
+  }
+
+  .admin-topbar h1 {
+    font-size: 25px;
+  }
+
+  .admin-stat-card {
+    padding: 20px;
+  }
+}
+
+/* ========== MOBILE ========== */
+
+@media (max-width: 767px) {
+
+  /* Sidebar becomes icon-only */
+  .admin-sidebar {
+    width: 65px;
+    padding: 22px 10px;
+    align-items: center;
+  }
+
+  /* Hide sidebar text */
+  .admin-brand span,
+  .admin-sidebar-label,
+  .admin-nav a span,
+  .admin-nav-item span,
+  .admin-sidebar-bottom span {
+    display: none;
+  }
+
+  /* Logo */
+  .admin-brand {
+    margin-bottom: 35px;
+    justify-content: center;
+  }
+
+  .admin-brand i {
+    font-size: 25px;
+  }
+
+  /* Navigation icons */
+  .admin-nav {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .admin-nav a,
+  .admin-nav-item {
+    justify-content: center;
+    padding: 12px 8px;
+    gap: 0;
+  }
+
+  .admin-nav a i,
+  .admin-nav-item i {
+    font-size: 21px;
+  }
+
+  /* Bottom Profile */
+  .admin-sidebar-bottom {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Main Content */
+  .admin-main {
+    margin-left: 65px;
+    padding: 20px 12px;
+  }
+
+  /* Header */
+  .admin-topbar {
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .admin-topbar h1 {
+    font-size: 22px;
+  }
+
+  .admin-topbar p {
+    font-size: 12px;
+  }
+
+  .admin-header-actions {
+    gap: 12px;
+    font-size: 18px;
+  }
+
+  .admin-user span {
+    display: none;
+  }
+
+  /* Cards */
+  .admin-stat-card {
+    padding: 18px;
+  }
+
+  .admin-stat-card h3 {
+    font-size: 25px;
+  }
+
+  .admin-stat-card p {
+    font-size: 12px;
+  }
+
+  /* Welcome Card */
+  .admin-welcome-card {
+    padding: 22px;
+    margin-top: 25px;
+  }
+
+  .admin-welcome-card h2 {
+    font-size: 20px;
+  }
+
+  .admin-welcome-card p {
+    font-size: 13px;
+  }
+}
+
+/* ========== EXTRA SMALL PHONES ========== */
+
+@media (max-width: 400px) {
+
+  .admin-main {
+    padding: 15px 10px;
+  }
+
+  .admin-topbar h1 {
+    font-size: 19px;
+  }
+
+  .admin-header-actions {
+    gap: 8px;
+  }
+
+  .admin-stat-card {
+    padding: 15px;
+  }
+
+  .admin-stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* ========== MANAGE MENU PAGE ========== */
+
+.admin-manage-menu {
+  width: 100%;
+}
+
+/* Page Heading */
+
+.admin-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.admin-section-heading h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.admin-section-heading p {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Add Product Button */
+
+.admin-add-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #ff6b00;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-add-btn:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+/* ========== PRODUCTS PANEL ========== */
+
+.admin-menu-panel {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+/* Search and Filter */
+
+.admin-menu-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.admin-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  padding: 11px 15px;
+  flex: 1;
+}
+
+.admin-search i {
+  color: #999;
+}
+
+.admin-search input {
+  background: transparent;
+  color: #333;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.admin-search input:disabled {
+  opacity: 1;
+}
+
+.admin-search input::placeholder {
+  color: #999;
+}
+
+.admin-category-select {
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  background: white;
+  color: #555;
+  padding: 11px 15px;
+}
+
+.admin-category-select:disabled {
+  opacity: 1;
+  color: #555;
+  background: white;
+}
+
+/* ========== PRODUCTS TABLE ========== */
+
+.admin-menu-table {
+  --bs-table-bg: white;
+  --bs-table-color: #222;
+  font-size: 14px;
+  min-width: 680px;
+}
+
+.admin-menu-table th {
+  color: #888;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.admin-menu-table td {
+  padding: 15px;
+}
+
+/* Product Details */
+
+.admin-product-info {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 230px;
+}
+
+.admin-product-info img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.admin-product-info h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.admin-product-info p {
+  color: #999;
+  font-size: 12px;
+  margin: 0;
+  max-width: 290px;
+  line-height: 1.5;
+}
+
+/* Category */
+
+.admin-category-badge {
+  display: inline-block;
+  background: #fff0e5;
+  color: #ed6500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Price */
+
+.admin-price {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ========== ACTION BUTTONS ========== */
+
+.admin-table-actions {
+  display: flex;
+  gap: 9px;
+}
+
+.admin-edit-btn,
+.admin-delete-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.admin-edit-btn {
+  background: #fff0e5;
+  color: #ff6b00;
+}
+
+.admin-delete-btn {
+  background: #ffebeb;
+  color: #dc3545;
+}
+
+.admin-edit-btn:disabled,
+.admin-delete-btn:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 767px) {
+  .admin-section-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .admin-section-heading h2 {
+    font-size: 19px;
+  }
+
+  .admin-add-btn {
+    padding: 10px 13px;
+    font-size: 12px;
+  }
+
+  .admin-menu-panel {
+    padding: 15px;
+  }
+
+  .admin-menu-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-category-select {
+    width: 100%;
+  }
+}
+
+
+/* ========== ADD PRODUCT PAGE ========== */
+
+.admin-add-product {
+  width: 100%;
+}
+
+/* ========== FORM CONTAINER ========== */
+
+.admin-product-form {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+  padding: 30px;
+}
+
+.admin-product-form h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.admin-form-subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* ========== FORM FIELDS ========== */
+
+.admin-form-label {
+  display: block;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.admin-form-input {
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  padding: 12px 15px;
+  font-size: 14px;
+  color: #222;
+  background: #fff;
+}
+
+.admin-form-input:focus {
+  border-color: #ff6b00;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+.admin-form-input::placeholder {
+  color: #aaa;
+}
+
+textarea.admin-form-input {
+  resize: vertical;
+  min-height: 115px;
+}
+
+
+/* ========== IMAGE PREVIEW ========== */
+
+.admin-image-upload {
+  background: #fafafa;
+  border: 2px dashed #ddd;
+  border-radius: 12px;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.admin-image-upload i {
+  font-size: 35px;
+  color: #ff6b00;
+}
+
+.admin-image-upload h4 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 12px 0 6px;
+}
+
+.admin-image-upload p {
+  color: #999;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* ========== FORM ACTIONS ========== */
+
+.admin-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #eee;
+}
+
+/* Cancel Button */
+
+.admin-cancel-btn {
+  color: #555;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  padding: 11px 23px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-cancel-btn:hover {
+  background: #f5f5f5;
+  color: #222;
+}
+
+/* Save Button */
+
+.admin-save-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  background: #ff6b00;
+  border: 1px solid #ff6b00;
+  border-radius: 9px;
+  padding: 11px 23px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-save-btn:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 767px) {
+
+  .admin-product-form {
+    padding: 20px 15px;
+  }
+
+  .admin-product-form h3 {
+    font-size: 18px;
+  }
+
+  .admin-form-subtitle {
+    font-size: 13px;
+  }
+
+  .admin-form-label {
+    font-size: 13px;
+  }
+
+  .admin-image-upload {
+    padding: 25px 15px;
+  }
+
+  .admin-form-actions {
+    gap: 10px;
+  }
+
+  .admin-cancel-btn,
+  .admin-save-btn {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   PRODUCT IMAGE INPUT
+========================================= */
+
+.admin-file-input {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 9px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.admin-file-input::file-selector-button {
+  background: #fff0e5;
+  color: #ff6b00;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  margin-right: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-file-hint {
+  display: block;
+  margin-top: 8px;
+  color: #999999;
+  font-size: 12px;
+}
+
+/* =========================================
+   IMAGE PREVIEW BOX
+========================================= */
+
+.admin-image-upload {
+  min-height: 230px;
+  background: #fafafa;
+  border: 2px dashed #dddddd;
+  border-radius: 12px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Preview Container */
+
+.admin-preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+/* Selected Image */
+
+.admin-preview-image {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Selected Image Name */
+
+.admin-preview-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  color: #555555;
+  font-size: 13px;
+  margin: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.admin-preview-name i {
+  color: #28a745;
+  font-size: 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 576px) {
+  .admin-image-upload {
+    padding: 18px;
+    min-height: 190px;
+  }
+
+  .admin-preview-image {
+    height: 160px;
+  }
+}
